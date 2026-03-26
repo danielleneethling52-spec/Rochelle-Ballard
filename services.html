@@ -3,103 +3,130 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our Services | RBA Inspections</title>
+    <title>Global Inspection Services | RBA Inspections</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <style>
-        body { background-color: #020617; color: white; font-family: 'Inter', sans-serif; }
-        .glass-nav { background: rgba(2, 6, 23, 0.9); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(255,255,255,0.05); }
+        body { background-color: #020617; color: white; font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
+        .glass-nav { background: rgba(2, 6, 23, 0.9); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(255,255,255,0.1); }
         .service-hero {
-            background: linear-gradient(rgba(2, 6, 23, 0.7), rgba(2, 6, 23, 1)), 
-                        url('https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&q=80&w=1600');
+            background: linear-gradient(rgba(2, 6, 23, 0.6), rgba(2, 6, 23, 1)), 
+                        url('https://images.unsplash.com/photo-1565793298595-6a879b1d9492?auto=format&fit=crop&q=80&w=2000');
             background-size: cover; background-position: center;
         }
         .btn-glow { background: linear-gradient(90deg, #2563eb, #3b82f6); transition: 0.5s; }
-        .btn-glow:hover { box-shadow: 0 0 20px rgba(37, 99, 235, 0.6); }
+        .btn-glow:hover { box-shadow: 0 0 25px rgba(37, 99, 235, 0.6); transform: translateY(-2px); }
         .floating-cta { position: fixed; bottom: 30px; right: 30px; z-index: 90; background: #1e293b; border: 1px solid #3b82f6; animation: bounce 2s infinite; }
         @keyframes bounce { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
-        #contactModal { display: none; }
-        #contactModal.active { display: flex; }
+        #contactModal { display: none; opacity: 0; transition: 0.3s; }
+        #contactModal.active { display: flex; opacity: 1; }
+        .content-section { line-height: 1.8; color: #94a3b8; }
+        strong { color: white; }
     </style>
 </head>
 <body>
     <nav class="fixed w-full z-50 glass-nav px-6 py-4 flex items-center justify-between">
         <div class="flex items-center gap-2 text-2xl font-extrabold tracking-tighter">
-            <span class="bg-blue-600 px-2 py-1 rounded text-white">RBA</span> <span class="text-blue-500">Inspections</span>
+            <span class="bg-blue-600 px-2 py-1 rounded text-white shadow-lg shadow-blue-500/30">RBA</span> <span class="text-blue-500">Inspections</span>
         </div>
         <div class="hidden md:flex space-x-8 font-semibold text-sm text-gray-400">
-            <a href="index.html" class="hover:text-white">Home</a>
+            <a href="index.html" class="hover:text-white transition">Home</a>
             <a href="services.html" class="text-blue-500">Services</a>
-            <a href="cases.html" class="hover:text-white">Case Studies</a>
-            <a href="reviews.html" class="hover:text-white">Reviews</a>
+            <a href="cases.html" class="hover:text-white transition">Case Studies</a>
+            <a href="reviews.html" class="hover:text-white transition">Reviews</a>
         </div>
-        <button onclick="toggleModal()" class="btn-glow px-6 py-2 rounded-lg font-bold text-sm">Book Inspection ></button>
+        <button onclick="toggleModal()" class="btn-glow px-6 py-2 rounded-lg font-bold text-sm text-white">Book Inspection ></button>
     </nav>
 
-    <section class="service-hero pt-40 pb-20 px-10 text-center">
-        <h1 class="text-5xl font-extrabold mb-4" data-aos="fade-down">Expert Inspection Solutions</h1>
-        <p class="text-gray-400 max-w-2xl mx-auto">We provide the technical eyes on the ground to ensure your global manufacturing meets local expectations.</p>
-    </section>
+    <header class="service-hero pt-52 pb-32 px-10 text-center">
+        <div data-aos="zoom-in">
+            <h1 class="text-5xl md:text-7xl font-extrabold mb-6">Our <span class="text-blue-500">Service</span> Portfolio</h1>
+            <p class="text-xl text-gray-300 max-w-3xl mx-auto font-light">Comprehensive quality control solutions designed to eliminate manufacturing defects, verify supplier legitimacy, and protect your brand equity.</p>
+        </div>
+    </header>
 
-    <section class="py-20 px-6 max-w-7xl mx-auto space-y-32">
-        <div class="flex flex-col md:flex-row items-center gap-12" data-aos="fade-right">
-            <div class="md:w-1/2">
-                <img src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&q=80&w=800" class="rounded-3xl shadow-2xl border border-blue-500/20" alt="Product Inspection">
+    <section class="py-20 px-6 max-w-6xl mx-auto">
+        <div class="mb-24 content-section" data-aos="fade-up">
+            <h2 class="text-3xl font-bold text-white mb-6">Standardizing Quality in a Global Market</h2>
+            <p class="mb-4">In today's complex supply chain environment, the distance between a brand and its manufacturer can lead to significant quality drift. RBA Inspections acts as your <strong>onsite technical advocate</strong>. We don't just "check boxes"; we analyze the structural integrity, aesthetic consistency, and functional reliability of your products using internationally recognized <strong>ISO 2859-1 (AQL)</strong> sampling plans.</p>
+            <p>Our methodology is rooted in transparency. When you engage RBA, you aren't just getting a PDF report—you're getting a real-time window into the factory floor. We serve industries ranging from consumer electronics and heavy machinery to luxury textiles and automotive components.</p>
+        </div>
+
+        <div id="product-inspection" class="grid md:grid-cols-2 gap-16 items-center mb-32">
+            <div data-aos="fade-right">
+                <img src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&q=80&w=1200" class="rounded-3xl border border-blue-500/30 shadow-2xl" alt="Technical Inspection">
             </div>
-            <div class="md:w-1/2">
-                <h2 class="text-3xl font-bold text-blue-500 mb-4">Product Inspections (DPI/FRI)</h2>
-                <p class="text-gray-300 mb-6">Our During Production and Final Random Inspections ensure that your goods are manufactured to your exact specifications before they leave the factory floor.</p>
-                <ul class="space-y-3 text-sm text-gray-400">
-                    <li><i class="fa-solid fa-check text-blue-500 mr-2"></i> Workmanship & Functionality Tests</li>
-                    <li><i class="fa-solid fa-check text-blue-500 mr-2"></i> Packaging & Labeling Verification</li>
-                    <li><i class="fa-solid fa-check text-blue-500 mr-2"></i> Measurement & Weight Checks</li>
+            <div class="content-section" data-aos="fade-left">
+                <h3 class="text-4xl font-bold text-white mb-6 italic">Product Inspections (DPI & FRI)</h3>
+                <p class="mb-6">Whether it is <strong>During Production (DPI)</strong> or a <strong>Final Random Inspection (FRI)</strong>, our engineers meticulously verify that your batch meets 100% of your specified criteria. We focus on identifying "Critical," "Major," and "Minor" defects before the goods leave the facility.</p>
+                <ul class="space-y-4 text-gray-300">
+                    <li class="flex items-start"><i class="fa-solid fa-circle-check text-blue-500 mt-1 mr-3"></i> <span><strong>Workmanship:</strong> Visual audit for scratches, burrs, or assembly errors.</span></li>
+                    <li class="flex items-start"><i class="fa-solid fa-circle-check text-blue-500 mt-1 mr-3"></i> <span><strong>On-site Testing:</strong> Rub tests, drop tests, hi-pot tests, and function cycles.</span></li>
+                    <li class="flex items-start"><i class="fa-solid fa-circle-check text-blue-500 mt-1 mr-3"></i> <span><strong>Packaging:</strong> Verification of barcodes, shipping marks, and drop-test compliance.</span></li>
                 </ul>
             </div>
         </div>
 
-        <div class="flex flex-col md:flex-row-reverse items-center gap-12" data-aos="fade-left">
-            <div class="md:w-1/2">
-                <img src="https://images.unsplash.com/photo-1513828583688-c52646db42da?auto=format&fit=crop&q=80&w=800" class="rounded-3xl shadow-2xl border border-blue-500/20" alt="Factory Audit">
-            </div>
-            <div class="md:w-1/2">
-                <h2 class="text-3xl font-bold text-blue-500 mb-4">Factory Audits</h2>
-                <p class="text-gray-300 mb-6">Don't guess who you are doing business with. Our auditors perform deep-dives into factory legitimacy, capacity, and social compliance.</p>
-                <ul class="space-y-3 text-sm text-gray-400">
-                    <li><i class="fa-solid fa-check text-blue-500 mr-2"></i> ISO 9001 Quality System Audit</li>
-                    <li><i class="fa-solid fa-check text-blue-500 mr-2"></i> Production Capacity Assessment</li>
-                    <li><i class="fa-solid fa-check text-blue-500 mr-2"></i> Social & Ethical Compliance (BSCI/SMETA)</li>
+        <div id="factory-audits" class="grid md:grid-cols-2 gap-16 items-center mb-32">
+            <div class="content-section order-2 md:order-1" data-aos="fade-right">
+                <h3 class="text-4xl font-bold text-white mb-6 italic">Factory Audits & Supplier Evaluation</h3>
+                <p class="mb-6">A high-quality sample doesn't guarantee a high-quality partner. Our <strong>Factory Audits</strong> deep-dive into the manufacturer’s DNA. We evaluate their Quality Management System (QMS) based on <strong>ISO 9001 standards</strong> to ensure they have the infrastructure to sustain long-term production.</p>
+                <div class="bg-blue-900/20 p-6 rounded-xl border border-blue-500/20 mb-6">
+                    <p class="text-sm italic">"We verify factory licenses, production lines, R&D capabilities, and social compliance to ensure your brand isn't exposed to ethical risks."</p>
+                </div>
+                <ul class="space-y-4 text-gray-300">
+                    <li class="flex items-start"><i class="fa-solid fa-shield-halved text-blue-500 mt-1 mr-3"></i> <span>Verification of production capacity and lead-time reliability.</span></li>
+                    <li class="flex items-start"><i class="fa-solid fa-shield-halved text-blue-500 mt-1 mr-3"></i> <span>Evaluation of raw material storage and warehouse management.</span></li>
                 </ul>
+            </div>
+            <div class="order-1 md:order-2" data-aos="fade-left">
+                <img src="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?auto=format&fit=crop&q=80&w=1200" class="rounded-3xl border border-blue-500/30 shadow-2xl" alt="Factory Audit">
+            </div>
+        </div>
+
+        <div id="pre-shipment" class="grid md:grid-cols-2 gap-16 items-center">
+            <div data-aos="fade-right">
+                <img src="https://images.unsplash.com/photo-1494412651409-8963ce7935a7?auto=format&fit=crop&q=80&w=1200" class="rounded-3xl border border-blue-500/30 shadow-2xl" alt="Container Loading">
+            </div>
+            <div class="content-section" data-aos="fade-left">
+                <h3 class="text-4xl font-bold text-white mb-6 italic">Pre-Shipment & Loading Supervision</h3>
+                <p class="mb-6">The final stage of the supply chain is often the most vulnerable. Our <strong>Container Loading Supervision (CLS)</strong> ensures that the correct quantity of goods is loaded into a structurally sound container, and that the palletization prevents transit damage.</p>
+                <p>We document the entire process, from the arrival of the container to the application of the lead seal, providing you with 100% certainty that what you paid for is what is on the ship.</p>
             </div>
         </div>
     </section>
 
-    <button onclick="toggleModal()" class="floating-cta flex items-center gap-3 px-6 py-3 rounded-full text-white font-bold shadow-lg">
-        <span>Book Now</span>
-        <i class="fa-solid fa-comment-dots"></i>
+    <footer class="bg-slate-950 py-12 px-6 border-t border-white/5 text-gray-500 text-sm text-center">
+        <p>© 2026 RBA Inspections. Global Quality, Guaranteed.</p>
+    </footer>
+
+    <button onclick="toggleModal()" class="floating-cta flex items-center gap-3 px-6 py-3 rounded-full text-white font-bold shadow-xl hover:bg-blue-600 transition">
+        <span>Book Inspection</span> <i class="fa-solid fa-comment-dots"></i>
     </button>
 
     <div id="contactModal" class="fixed inset-0 z-[100] items-center justify-center bg-black/90 backdrop-blur-md p-4">
         <div class="bg-slate-900 border border-blue-500/40 p-8 rounded-3xl max-w-md w-full relative">
             <button onclick="toggleModal()" class="absolute top-4 right-4 text-gray-400 text-3xl">&times;</button>
             <form action="https://formspree.io/f/your-endpoint-here" method="POST" class="space-y-4">
-                <h2 class="text-2xl font-bold">Request Inspection</h2>
-                <input type="text" name="name" placeholder="Name" required class="w-full bg-slate-800 p-3 rounded-lg border border-slate-700">
-                <input type="email" name="email" placeholder="Email" required class="w-full bg-slate-800 p-3 rounded-lg border border-slate-700">
-                <select name="service" class="w-full bg-slate-800 p-3 rounded-lg border border-slate-700">
+                <h2 class="text-2xl font-bold">Secure Your Quote</h2>
+                <input type="text" name="name" placeholder="Name" required class="w-full bg-slate-800 p-3 rounded-lg border border-slate-700 text-white">
+                <input type="email" name="email" placeholder="Email" required class="w-full bg-slate-800 p-3 rounded-lg border border-slate-700 text-white">
+                <select name="service" class="w-full bg-slate-800 p-3 rounded-lg border border-slate-700 text-white">
                     <option>Product Inspection</option>
                     <option>Factory Audit</option>
                     <option>Pre-Shipment Check</option>
                 </select>
-                <button type="submit" class="w-full btn-glow py-4 rounded-xl font-bold">Submit Request</button>
+                <textarea name="message" placeholder="Project Details" class="w-full bg-slate-800 p-3 rounded-lg border border-slate-700 text-white"></textarea>
+                <button type="submit" class="w-full btn-glow py-4 rounded-xl font-bold text-white">Send Request</button>
             </form>
         </div>
     </div>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-        AOS.init();
+        AOS.init({ duration: 1000, once: true });
         function toggleModal() { document.getElementById('contactModal').classList.toggle('active'); }
     </script>
 </body>
