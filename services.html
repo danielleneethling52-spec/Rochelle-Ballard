@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services | RBA Inspections</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+        body { background-color: #020617; color: #cbd5e1; font-family: 'Inter', sans-serif; }
+        .service-img { border-radius: 2rem; border: 1px solid rgba(59, 130, 246, 0.2); }
+        .glass-nav { background: rgba(2, 6, 23, 0.9); backdrop-filter: blur(10px); border-bottom: 1px solid rgba(255,255,255,0.1); }
+    </style>
+</head>
+<body>
+    <nav class="fixed w-full z-50 glass-nav px-8 py-4 flex items-center justify-between">
+        <div class="flex items-center gap-2">
+            <span class="bg-blue-600 text-white px-2 py-1 rounded font-extrabold italic">RBA</span>
+            <span class="text-blue-500 font-bold">Inspections</span>
+        </div>
+        <div class="hidden md:flex space-x-8 text-sm font-semibold text-gray-400">
+            <a href="index.html" class="hover:text-white">Home</a>
+            <a href="services.html" class="text-white border-b-2 border-blue-500 pb-1">Services</a>
+            <a href="cases.html" class="hover:text-white">Case Studies</a>
+            <a href="reviews.html" class="hover:text-white">Reviews</a>
+            <a href="blog.html" class="hover:text-white">Blog</a>
+            <a href="contact.html" class="hover:text-white">Contact</a>
+        </div>
+    </nav>
+
+    <section class="pt-40 pb-20 px-8 max-w-7xl mx-auto">
+        <h1 class="text-6xl font-extrabold text-white mb-12 text-center" data-aos="fade-down">Our Solutions</h1>
+        
+        <div class="grid md:grid-cols-2 gap-20 items-center mb-32" data-aos="fade-up">
+            <div>
+                <h2 class="text-3xl font-bold text-blue-500 mb-6">Product Quality Inspections</h2>
+                <p class="mb-6 leading-relaxed">Manufacturing at scale requires eyes on the ground. We provide <strong>During Production Inspections (DPI)</strong> and <strong>Final Random Inspections (FRI)</strong> based on AQL standards. Our goal is to ensure that the batch produced today matches the golden sample you approved months ago.</p>
+                <ul class="space-y-4 text-gray-400">
+                    <li><i class="fa-solid fa-check text-blue-500 mr-2"></i> Visual & Functional Testing</li>
+                    <li><i class="fa-solid fa-check text-blue-500 mr-2"></i> Measurement Verification</li>
+                    <li><i class="fa-solid fa-check text-blue-500 mr-2"></i> Packaging & Barcode Compliance</li>
+                </ul>
+            </div>
+            <img src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&q=80&w=800" class="service-img">
+        </div>
+
+        </section>
+
+    <div onclick="location.href='contact.html'" class="fixed bottom-8 right-8 bg-blue-600 text-white px-6 py-3 rounded-full font-bold shadow-2xl z-50 cursor-pointer">
+        Book Now <i class="fa-solid fa-paper-plane ml-2"></i>
+    </div>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>AOS.init();</script>
+</body>
+</html>
