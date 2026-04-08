@@ -3,89 +3,150 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Understanding AQL: The Importer's Shield | RBA Inspections</title>
-    <meta name="description" content="A comprehensive guide to Acceptable Quality Limits (AQL). Learn how to use ISO 2859-1 standards to protect your product quality and brand reputation.">
+    <title>5 Red Flags During a Factory Audit | RBA Inspections Blog</title>
+    <meta name="description" content="Learn the top 5 warning signs to look for during a supplier audit. Protect your investment by spotting factory red flags early.">
+    
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;700;800&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    
     <style>
-        body { background-color: #020617; color: #94a3b8; font-family: 'Inter', sans-serif; line-height: 1.8; }
-        .prose h2, .prose h3 { color: white; font-weight: 800; margin-top: 2.5rem; margin-bottom: 1rem; }
-        .prose strong { color: #3b82f6; }
-        .glass-card { background: rgba(15, 23, 42, 0.6); border: 1px solid rgba(59, 130, 246, 0.2); border-radius: 1.5rem; padding: 2rem; }
-        table { width: 100%; border-collapse: collapse; margin: 2rem 0; color: white; font-size: 0.875rem; }
-        th { background: #1e293b; text-align: left; padding: 1rem; border: 1px solid #334155; }
-        td { padding: 1rem; border: 1px solid #334155; }
+        :root {
+            --primary-dark: #233036;
+            --secondary-dark: #244357;
+            --accent-blue: #89A9BA;
+            --accent-red: #E63946;
+            --text-light: #DBDCDC;
+        }
+
+        body { 
+            background-color: var(--primary-dark); 
+            color: var(--text-light); 
+            font-family: 'Inter', sans-serif; 
+            line-height: 1.8; 
+        }
+
+        h1, h2, h3, .nav-logo { 
+            font-family: 'League Spartan', sans-serif; 
+            text-transform: uppercase;
+            letter-spacing: -0.01em;
+            color: white;
+        }
+
+        .glass-nav { 
+            background: rgba(35, 48, 54, 0.95); 
+            backdrop-filter: blur(10px); 
+            border-bottom: 1px solid rgba(137, 169, 186, 0.1); 
+        }
+
+        .red-flag-box { 
+            border-left: 4px solid var(--accent-red); 
+            background: rgba(230, 57, 70, 0.05); 
+            padding: 2.5rem; 
+            margin: 2.5rem 0; 
+            border-radius: 0 1.5rem 1.5rem 0; 
+            transition: 0.3s ease;
+        }
+        
+        .red-flag-box:hover {
+            background: rgba(230, 57, 70, 0.08);
+        }
+
+        .flag-num { 
+            color: var(--accent-red); 
+            font-family: 'League Spartan', sans-serif;
+            font-weight: 900; 
+            font-size: 2.5rem; 
+            line-height: 1;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        .cta-card {
+            background: var(--secondary-dark);
+            border: 1px solid rgba(137, 169, 186, 0.1);
+        }
+
+        .btn-brand { 
+            background: var(--accent-blue);
+            color: var(--primary-dark);
+            transition: 0.3s;
+            font-weight: 800;
+        }
+        .btn-brand:hover { 
+            background: #ffffff; 
+            box-shadow: 0 0 20px rgba(137, 169, 186, 0.4); 
+        }
     </style>
 </head>
 <body>
-    <nav class="fixed w-full z-50 bg-slate-950/90 backdrop-blur-md px-6 py-4 border-b border-white/10">
-        <a href="blog.html" class="text-blue-500 font-bold hover:text-white transition"><i class="fa-solid fa-arrow-left mr-2"></i> Back to Blog Index</a>
+    <nav class="fixed w-full z-50 glass-nav px-6 py-4 border-b border-white/10">
+        <div class="max-w-6xl mx-auto flex justify-between items-center">
+            <a href="blog.html" class="text-[#89A9BA] font-bold hover:text-white transition flex items-center gap-2 uppercase tracking-widest text-xs">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd" d="M9.707 16.707a1 1 0 01-1.414 0l-6-6a1 1 0 010-1.414l6-6a1 1 0 011.414 1.414L5.414 9H17a1 1 0 110 2H5.414l4.293 4.293a1 1 0 010 1.414z" clip-rule="evenodd" />
+                </svg>
+                All Articles
+            </a>
+            <div class="nav-logo text-xl font-extrabold tracking-tighter">
+                <span class="text-[#89A9BA]">RBA</span> <span class="text-white/40">Insights</span>
+            </div>
+        </div>
     </nav>
 
-    <article class="pt-32 pb-20 px-6 max-w-4xl mx-auto prose">
-        <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=1200" class="w-full rounded-3xl mb-12 shadow-2xl border border-white/10" alt="Inspector measuring product dimensions">
+    <article class="pt-40 pb-20 px-6 max-w-4xl mx-auto">
+        <header class="mb-16">
+            <p class="text-[#E63946] font-bold uppercase tracking-[0.3em] text-xs mb-4">Risk Management</p>
+            <h1 class="text-4xl md:text-7xl font-extrabold mb-8 tracking-tighter leading-none">5 Red Flags During <br>a Factory Audit</h1>
+            <p class="text-xl text-[#DBDCDC]/60 font-light">A factory might look spectacular in a PDF presentation, but the reality on the ground often tells a different story.</p>
+        </header>
+
+        <img src="https://images.unsplash.com/photo-1521791136064-7986c2923216?auto=format&fit=crop&q=80&w=1200" class="w-full rounded-3xl mb-16 shadow-2xl" alt="Professional observing factory line">
         
-        <h1 class="text-4xl md:text-6xl font-black text-white mb-6 leading-tight">Understanding AQL: The Importer's Shield</h1>
-        <p class="text-xl text-blue-400 italic mb-8">Mastering the mathematics of Quality Control to eliminate manufacturing risk.</p>
+        <div class="space-y-4 text-lg font-light leading-relaxed text-[#DBDCDC]/80">
+            <p>Relying on digital brochures and Alibaba profiles is a dangerous game. In our years of auditing facilities across Asia and Africa, we've identified five consistent warning signs that suggest a supplier is either unable or unwilling to meet global quality standards.</p>
 
-        <section>
-            <h2>The Critical Question: What is AQL?</h2>
-            <p>In the world of international trade, the **Acceptable Quality Limit (AQL)** is the single most important metric for importers. Developed as part of the **ISO 2859-1 standard**, AQL provides a statistical method to determine if a production batch should be accepted or rejected without the need to inspect every single unit—which would be cost-prohibitive.</p>
-            <p>Think of AQL as your "risk threshold." It defines the maximum number of defective units that, for the purpose of sampling inspection, can be considered satisfactory as a process average.</p>
-        </section>
+            <div class="red-flag-box">
+                <span class="flag-num">01</span>
+                <h3 class="text-white text-xl font-bold mb-2 uppercase tracking-tight">Restricted Access to Specific Areas</h3>
+                <p class="text-base">If a manager refuses to show you the raw material warehouse or the testing lab, they are hiding a critical link in the chain. Usually, this indicates they are "Shadow Sourcing"—outsourcing your production to an unverified, sub-standard facility to cut costs.</p>
+            </div>
 
-        <section class="glass-card my-12">
-            <h3 class="mt-0">The Three Defect Classifications</h3>
-            <p>At RBA Inspections, we categorize every finding into three distinct buckets:</p>
-            <ul class="space-y-4">
-                <li><strong>Critical Defects:</strong> 100% unacceptable. These pose a safety risk to the user or violate mandatory regulations (e.g., sharp edges on toys, exposed wiring).</li>
-                <li><strong>Major Defects:</strong> Issues that result in product failure or significant reduction in marketability (e.g., a non-functioning screen, wrong color).</li>
-                <li><strong>Minor Defects:</strong> Aesthetic deviations that don’t affect function but fall below the brand's quality standard (e.g., a small scratch, loose thread).</li>
-            </ul>
-        </section>
+            <div class="red-flag-box">
+                <span class="flag-num">02</span>
+                <h3 class="text-white text-xl font-bold mb-2 uppercase tracking-tight">Uncalibrated Testing Equipment</h3>
+                <p class="text-base">Quality control is only as reliable as the tools used to measure it. We frequently find scales, calipers, and pressure testers that haven't been professionally calibrated in years. This is an immediate fail for any robust Quality Management System (QMS).</p>
+            </div>
 
-        <section>
-            <h2>How to Read the AQL Table</h2>
-            <p>Choosing your AQL levels is a strategic business decision. Most consumer goods importers utilize the following standard "General Inspection Level II":</p>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Defect Type</th>
-                        <th>Standard AQL Level</th>
-                        <th>Description</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Critical</td>
-                        <td>0.0</td>
-                        <td>Zero tolerance for safety risks.</td>
-                    </tr>
-                    <tr>
-                        <td>Major</td>
-                        <td>2.5</td>
-                        <td>Standard for most consumer electronics/textiles.</td>
-                    </tr>
-                    <tr>
-                        <td>Minor</td>
-                        <td>4.0</td>
-                        <td>Acceptable level for minor visual flaws.</td>
-                    </tr>
-                </tbody>
-            </table>
-        </section>
+            <div class="red-flag-box">
+                <span class="flag-num">03</span>
+                <h3 class="text-white text-xl font-bold mb-2 uppercase tracking-tight">Signs of High Labor Turnover</h3>
+                <p class="text-base">If line workers appear confused, lack basic PPE, or are being supervised with visible tension, it suggests high turnover. In manufacturing, inconsistent labor is the primary driver of inconsistent product quality.</p>
+            </div>
 
-        <section>
-            <h2>Strategic Implementation</h2>
-            <p>As an importer, you must communicate these levels to your supplier *before* production begins. This ensures that the factory knows exactly what the "Pass/Fail" criteria will be when the RBA team arrives for the **Final Random Inspection (FRI)**. By utilizing AQL, you transition from "guessing" about quality to making data-driven procurement decisions.</p>
-        </section>
+            <div class="red-flag-box">
+                <span class="flag-num">04</span>
+                <h3 class="text-white text-xl font-bold mb-2 uppercase tracking-tight">Poor Raw Material Organization</h3>
+                <p class="text-base">A cluttered, disorganized warehouse is a breeding ground for contamination and incorrect material usage. If they don't respect their raw materials, they won't respect your finished product.</p>
+            </div>
 
-        <div class="mt-16 p-10 bg-blue-600 rounded-3xl text-white text-center">
-            <h2 class="mt-0 text-white">Need an AQL Inspection?</h2>
-            <p class="mb-8">Our expert team handles the math so you can focus on scaling your business.</p>
-            <a href="index.html#contactModal" class="inline-block bg-white text-blue-600 px-10 py-4 rounded-xl font-black uppercase hover:bg-slate-100 transition">Get a Quote Now</a>
+            <div class="red-flag-box">
+                <span class="flag-num">05</span>
+                <h3 class="text-white text-xl font-bold mb-2 uppercase tracking-tight">The "Yes-Man" Culture</h3>
+                <p class="text-base">If a factory representative agrees to every complex technical request without checking with their engineering team, be wary. True manufacturers know their limits; trading agents tell you what you want to hear.</p>
+            </div>
+
+            <div class="cta-card p-12 rounded-3xl text-center mt-20 border-t-4 border-[#89A9BA]">
+                <h2 class="text-3xl font-bold text-white mb-4">Don't Get Scammed.</h2>
+                <p class="mb-8 font-light text-[#DBDCDC]/60">Book a professional Factory Audit today and verify your supplier’s legitimacy before making a deposit.</p>
+                <a href="contact.html" class="btn-brand px-10 py-4 rounded-xl font-extrabold uppercase tracking-[0.2em] text-sm inline-block">
+                    Inquire Now
+                </a>
+            </div>
         </div>
     </article>
+
+    <footer class="bg-[#233036] py-16 px-6 text-center text-[#DBDCDC]/20 text-xs tracking-widest uppercase">
+        <p>© 2026 RBA Inspections | Protecting Your Global Supply Chain</p>
+    </footer>
 </body>
 </html>
