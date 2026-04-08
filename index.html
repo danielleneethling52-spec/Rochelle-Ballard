@@ -47,16 +47,17 @@
 
     <nav class="fixed w-full z-50 glass-nav px-6 py-4 flex items-center justify-between">
         <div class="flex items-center gap-2 text-2xl font-extrabold tracking-tighter">
-            <span class="bg-blue-600 px-2 py-1 rounded text-white">RBA</span> <span class="text-blue-500">Inspections</span>
+            <span class="bg-blue-600 px-2 py-1 rounded text-white shadow-lg shadow-blue-500/30">RBA</span> <span class="text-blue-500">Inspections</span>
         </div>
         <div class="hidden md:flex space-x-8 font-semibold text-sm text-gray-400">
             <a href="index.html" class="text-blue-500">Home</a>
             <a href="services.html" class="hover:text-white transition">Services</a>
             <a href="cases.html" class="hover:text-white transition">Case Studies</a>
-            <a href="Reviews.html" class="hover:text-white transition">Reviews</a>
+            <a href="blog.html" class="hover:text-white transition">Blog</a>
+            <a href="reviews.html" class="hover:text-white transition">Reviews</a>
         </div>
         <div class="flex items-center gap-4">
-            <button onclick="toggleModal()" class="hidden md:block btn-glow px-6 py-2 rounded-lg font-bold text-sm">Book Inspection ></button>
+            <button onclick="toggleModal()" class="hidden md:block btn-glow px-6 py-2 rounded-lg font-bold text-sm text-white">Book Inspection ></button>
             <button onclick="toggleMobileMenu()" class="md:hidden text-2xl" aria-label="Menu"><i class="fa-solid fa-bars"></i></button>
         </div>
     </nav>
@@ -66,7 +67,9 @@
         <a href="index.html" onclick="toggleMobileMenu()">Home</a>
         <a href="services.html" onclick="toggleMobileMenu()">Services</a>
         <a href="cases.html" onclick="toggleMobileMenu()">Case Studies</a>
-        <button onclick="toggleModal(); toggleMobileMenu()" class="btn-glow py-4 rounded-xl text-center">Book Inspection</button>
+        <a href="blog.html" onclick="toggleMobileMenu()">Blog</a>
+        <a href="reviews.html" onclick="toggleMobileMenu()">Reviews</a>
+        <button onclick="toggleModal(); toggleMobileMenu()" class="btn-glow py-4 rounded-xl text-center text-white">Book Inspection</button>
     </div>
 
     <header class="hero-gradient min-h-screen flex flex-col justify-center items-start px-10 md:px-24">
@@ -78,8 +81,8 @@
                 Professional third-party inspections to safeguard your supply chain, minimize risks, and ensure global compliance.
             </p>
             <div class="flex flex-wrap gap-4">
-                <button onclick="toggleModal()" class="btn-glow px-10 py-4 rounded-xl text-lg font-bold">Book Inspection Now</button>
-                <a href="#services" class="bg-white/10 hover:bg-white/20 backdrop-blur-md px-10 py-4 rounded-xl text-lg font-bold transition flex items-center">View Services</a>
+                <button onclick="toggleModal()" class="btn-glow px-10 py-4 rounded-xl text-lg font-bold text-white">Book Inspection Now</button>
+                <a href="#services" class="bg-white/10 hover:bg-white/20 backdrop-blur-md px-10 py-4 rounded-xl text-lg font-bold transition flex items-center text-white">View Services</a>
             </div>
         </div>
     </header>
@@ -163,7 +166,7 @@
                 <a href="#" class="hover:text-blue-500">Privacy Policy</a>
                 <a href="#" class="hover:text-blue-500">Terms of Service</a>
             </div>
-            <div class="flex gap-4 text-xl">
+            <div class="flex gap-4 text-xl text-white/50">
                 <i class="fa-brands fa-facebook hover:text-white cursor-pointer transition"></i>
                 <i class="fa-brands fa-linkedin hover:text-white cursor-pointer transition"></i>
             </div>
@@ -171,7 +174,7 @@
     </footer>
 
     <div id="contactModal" class="fixed inset-0 z-[100] items-center justify-center bg-black/80 backdrop-blur-sm p-4">
-        <div class="bg-slate-900 border border-blue-500/30 p-8 rounded-3xl max-w-md w-full relative">
+        <div class="bg-slate-900 border border-blue-500/30 p-8 rounded-3xl max-w-md w-full relative text-white">
             <button onclick="toggleModal()" class="absolute top-4 right-4 text-gray-400 hover:text-white text-2xl">&times;</button>
             <h2 class="text-2xl font-bold mb-2">Book Your Inspection</h2>
             <form id="contactForm" action="https://formspree.io/f/your-endpoint-here" method="POST" class="space-y-4">
@@ -191,7 +194,7 @@
                         <option>Pre-Shipment Check</option>
                     </select>
                 </div>
-                <button type="submit" class="w-full btn-glow py-4 rounded-xl font-bold text-lg mt-4 shadow-lg shadow-blue-500/20">Send Request</button>
+                <button type="submit" class="w-full btn-glow py-4 rounded-xl font-bold text-lg mt-4 shadow-lg shadow-blue-500/20 text-white">Send Request</button>
             </form>
         </div>
     </div>
