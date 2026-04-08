@@ -3,18 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RBA Inspections | Premium Quality Assurance</title>
+    
+    <title>RBA Inspections | Premium Quality Assurance & Factory Audits</title>
+    <meta name="description" content="Professional third-party inspections and factory audits. Safeguard your supply chain with RBA Inspections. Same-day reporting and global compliance.">
+    <link rel="canonical" href="https://yourusername.github.io/your-repo-name/">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" media="print" onload="this.media='all'">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     
     <style>
         body { background-color: #020617; color: white; font-family: 'Inter', sans-serif; overflow-x: hidden; }
         .glass-nav { background: rgba(2, 6, 23, 0.8); backdrop-filter: blur(10px); border-bottom: 1px solid rgba(255,255,255,0.05); }
         .hero-gradient {
-            background: linear-gradient(to bottom, rgba(2, 6, 23, 0.4), rgba(2, 6, 23, 1)), 
-                        url('https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=2000');
+            background: linear-gradient(to bottom, rgba(2, 6, 23, 0.5), rgba(2, 6, 23, 1)), 
+                        url('https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=60&w=1600');
             background-size: cover; background-position: center;
         }
         .step-card { 
@@ -43,26 +50,26 @@
             <span class="bg-blue-600 px-2 py-1 rounded text-white">RBA</span> <span class="text-blue-500">Inspections</span>
         </div>
         <div class="hidden md:flex space-x-8 font-semibold text-sm text-gray-400">
-            <a href="#" class="text-blue-500">Home</a>
+            <a href="index.html" class="text-blue-500">Home</a>
             <a href="services.html" class="hover:text-white transition">Services</a>
             <a href="cases.html" class="hover:text-white transition">Case Studies</a>
             <a href="Reviews.html" class="hover:text-white transition">Reviews</a>
         </div>
         <div class="flex items-center gap-4">
             <button onclick="toggleModal()" class="hidden md:block btn-glow px-6 py-2 rounded-lg font-bold text-sm">Book Inspection ></button>
-            <button onclick="toggleMobileMenu()" class="md:hidden text-2xl"><i class="fa-solid fa-bars"></i></button>
+            <button onclick="toggleMobileMenu()" class="md:hidden text-2xl" aria-label="Menu"><i class="fa-solid fa-bars"></i></button>
         </div>
     </nav>
 
     <div id="mobileMenu" class="fixed inset-0 z-[60] bg-slate-950 p-10 flex flex-col space-y-8 text-2xl font-bold">
         <button onclick="toggleMobileMenu()" class="absolute top-6 right-6 text-3xl">&times;</button>
-        <a href="#" onclick="toggleMobileMenu()">Home</a>
-        <a href="#services" onclick="toggleMobileMenu()">Services</a>
+        <a href="index.html" onclick="toggleMobileMenu()">Home</a>
+        <a href="services.html" onclick="toggleMobileMenu()">Services</a>
         <a href="cases.html" onclick="toggleMobileMenu()">Case Studies</a>
         <button onclick="toggleModal(); toggleMobileMenu()" class="btn-glow py-4 rounded-xl text-center">Book Inspection</button>
     </div>
 
-    <section class="hero-gradient min-h-screen flex flex-col justify-center items-start px-10 md:px-24">
+    <header class="hero-gradient min-h-screen flex flex-col justify-center items-start px-10 md:px-24">
         <div data-aos="fade-right" data-aos-duration="1000">
             <h1 class="text-5xl md:text-7xl font-extrabold leading-none mb-6">
                 Ensuring Your <span class="text-blue-500">Product Quality</span><br>Every Step of the Way
@@ -75,32 +82,32 @@
                 <a href="#services" class="bg-white/10 hover:bg-white/20 backdrop-blur-md px-10 py-4 rounded-xl text-lg font-bold transition flex items-center">View Services</a>
             </div>
         </div>
-    </section>
+    </header>
 
     <section class="py-24 px-6 md:px-20 bg-slate-950">
         <div class="text-center mb-16" data-aos="fade-up">
-            <h2 class="text-blue-500 font-bold uppercase tracking-widest text-sm mb-2">Process</h2>
-            <h3 class="text-4xl md:text-5xl font-bold italic">How It Works</h3>
+            <p class="text-blue-500 font-bold uppercase tracking-widest text-sm mb-2">Process</p>
+            <h2 class="text-4xl md:text-5xl font-bold italic">How It Works</h2>
         </div>
         <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
             <div class="step-card p-10 rounded-2xl" data-aos="fade-up" data-aos-delay="100">
                 <i class="fa-solid fa-file-signature text-5xl text-blue-500 mb-6"></i>
-                <h4 class="text-xl font-bold mb-3">1. Submit Request</h4>
+                <h3 class="text-xl font-bold mb-3">1. Submit Request</h3>
                 <p class="text-gray-400 text-sm">Upload your specs and requirements in minutes through our secure portal.</p>
             </div>
             <div class="step-card p-10 rounded-2xl" data-aos="fade-up" data-aos-delay="200">
                 <i class="fa-solid fa-user-check text-5xl text-blue-500 mb-6"></i>
-                <h4 class="text-xl font-bold mb-3">2. On-Site Inspection</h4>
+                <h3 class="text-xl font-bold mb-3">2. On-Site Inspection</h3>
                 <p class="text-gray-400 text-sm">Our experts arrive at the factory within 24 hours to begin the audit.</p>
             </div>
             <div class="step-card p-10 rounded-2xl" data-aos="fade-up" data-aos-delay="300">
                 <i class="fa-solid fa-chart-line text-5xl text-blue-500 mb-6"></i>
-                <h4 class="text-xl font-bold mb-3">3. Receive Report</h4>
+                <h3 class="text-xl font-bold mb-3">3. Receive Report</h3>
                 <p class="text-gray-400 text-sm">A comprehensive digital report with photos and videos delivered same-day.</p>
             </div>
             <div class="step-card p-10 rounded-2xl" data-aos="fade-up" data-aos-delay="400">
                 <i class="fa-solid fa-shield-halved text-5xl text-blue-500 mb-6"></i>
-                <h4 class="text-xl font-bold mb-3">4. Approve / Action</h4>
+                <h3 class="text-xl font-bold mb-3">4. Approve / Action</h3>
                 <p class="text-gray-400 text-sm">Make informed decisions to release shipment or request rework immediately.</p>
             </div>
         </div>
@@ -108,37 +115,44 @@
 
     <section id="services" class="py-24 px-6 md:px-20 bg-[#020617]">
         <div class="text-center mb-16" data-aos="fade-up">
-            <h2 class="text-blue-500 font-bold uppercase tracking-widest text-sm mb-2">Our Solutions</h2>
-            <h3 class="text-4xl md:text-5xl font-bold italic">Specialized Services</h3>
+            <p class="text-blue-500 font-bold uppercase tracking-widest text-sm mb-2">Our Solutions</p>
+            <h2 class="text-4xl md:text-5xl font-bold italic">Specialized Services</h2>
         </div>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-7xl mx-auto">
-            <div class="relative h-96 overflow-hidden rounded-2xl group" data-aos="zoom-in">
-                <img src="https://images.unsplash.com/photo-1556761175-b413da4baf72?q=80&w=600" class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
+            
+            <a href="product-inspections.html" class="relative h-96 overflow-hidden rounded-2xl group block" data-aos="zoom-in">
+                <img src="https://images.unsplash.com/photo-1556761175-b413da4baf72?q=60&w=800" alt="Product Quality Inspections" loading="lazy" class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
                 <div class="absolute inset-0 bg-gradient-to-t from-blue-900 via-transparent to-transparent flex items-end p-8">
                     <div>
-                        <h5 class="font-bold text-2xl mb-2">Product Inspections</h5>
+                        <h3 class="font-bold text-2xl mb-2">Product Inspections</h3>
                         <p class="text-sm text-gray-300">Rigorous checking of final goods against your AQL standards.</p>
+                        <span class="inline-block mt-4 text-blue-400 font-bold text-xs uppercase tracking-widest">Learn More →</span>
                     </div>
                 </div>
-            </div>
-            <div class="relative h-96 overflow-hidden rounded-2xl group" data-aos="zoom-in" data-aos-delay="100">
-                <img src="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?q=80&w=600" class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
+            </a>
+
+            <a href="factory-audits.html" class="relative h-96 overflow-hidden rounded-2xl group block" data-aos="zoom-in" data-aos-delay="100">
+                <img src="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?q=60&w=800" alt="Factory Audit Services" loading="lazy" class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
                 <div class="absolute inset-0 bg-gradient-to-t from-blue-900 via-transparent to-transparent flex items-end p-8">
                     <div>
-                        <h5 class="font-bold text-2xl mb-2">Factory Audits</h5>
+                        <h3 class="font-bold text-2xl mb-2">Factory Audits</h3>
                         <p class="text-sm text-gray-300">Comprehensive evaluation of supplier capacity and compliance.</p>
+                        <span class="inline-block mt-4 text-blue-400 font-bold text-xs uppercase tracking-widest">Learn More →</span>
                     </div>
                 </div>
-            </div>
-            <div class="relative h-96 overflow-hidden rounded-2xl group" data-aos="zoom-in" data-aos-delay="200">
-                <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?q=80&w=600" class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
+            </a>
+
+            <a href="pre-shipment-checks.html" class="relative h-96 overflow-hidden rounded-2xl group block" data-aos="zoom-in" data-aos-delay="200">
+                <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?q=60&w=800" alt="Pre-Shipment Quality Control" loading="lazy" class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
                 <div class="absolute inset-0 bg-gradient-to-t from-blue-900 via-transparent to-transparent flex items-end p-8">
                     <div>
-                        <h5 class="font-bold text-2xl mb-2">Pre-Shipment Checks</h5>
+                        <h3 class="font-bold text-2xl mb-2">Pre-Shipment Checks</h3>
                         <p class="text-sm text-gray-300">Ensuring quantity and quality before the container is locked.</p>
+                        <span class="inline-block mt-4 text-blue-400 font-bold text-xs uppercase tracking-widest">Learn More →</span>
                     </div>
                 </div>
-            </div>
+            </a>
+
         </div>
     </section>
 
@@ -160,8 +174,6 @@
         <div class="bg-slate-900 border border-blue-500/30 p-8 rounded-3xl max-w-md w-full relative">
             <button onclick="toggleModal()" class="absolute top-4 right-4 text-gray-400 hover:text-white text-2xl">&times;</button>
             <h2 class="text-2xl font-bold mb-2">Book Your Inspection</h2>
-            <p class="text-gray-400 text-sm mb-6">Replace the action URL below with your Formspree ID.</p>
-            
             <form id="contactForm" action="https://formspree.io/f/your-endpoint-here" method="POST" class="space-y-4">
                 <div>
                     <label class="text-xs uppercase text-blue-500 font-bold">Full Name</label>
@@ -181,17 +193,14 @@
                 </div>
                 <button type="submit" class="w-full btn-glow py-4 rounded-xl font-bold text-lg mt-4 shadow-lg shadow-blue-500/20">Send Request</button>
             </form>
-            <div id="successMsg" class="hidden text-center py-10">
-                <i class="fa-solid fa-circle-check text-6xl text-green-500 mb-4"></i>
-                <h3 class="text-xl font-bold">Message Sent!</h3>
-                <p class="text-gray-400">We will be in touch shortly.</p>
-            </div>
         </div>
     </div>
 
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" defer></script>
     <script>
-        AOS.init({ duration: 800, once: true });
+        document.addEventListener('DOMContentLoaded', function() {
+            AOS.init({ duration: 800, once: true });
+        });
 
         function toggleModal() {
             document.getElementById('contactModal').classList.toggle('active');
@@ -199,19 +208,6 @@
 
         function toggleMobileMenu() {
             document.getElementById('mobileMenu').classList.toggle('open');
-        }
-
-        // Form Success Logic
-        const form = document.getElementById('contactForm');
-        const successMsg = document.getElementById('successMsg');
-        
-        form.onsubmit = async (e) => {
-            // Optional: Uncomment below to test the "Success" view without sending an actual email
-            /*
-            e.preventDefault();
-            form.classList.add('hidden');
-            successMsg.classList.remove('hidden');
-            */
         }
 
         window.onclick = function(event) {
