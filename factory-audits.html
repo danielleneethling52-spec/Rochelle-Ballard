@@ -5,80 +5,144 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Factory Audits & Supplier Evaluation | ISO 9001 Compliance | RBA</title>
     <meta name="description" content="Verify your suppliers with RBA Factory Audits. We evaluate QMS, production capacity, and ethical compliance to ensure your supply chain is secure.">
-    <link rel="canonical" href="https://danielleneethling52-spec.github.io/Rochelle-Ballard/factory-audits.html">
+    
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;700;800&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" media="print" onload="this.media='all'">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
     <style>
-        body { background-color: #020617; color: white; font-family: 'Inter', sans-serif; line-height: 1.8; }
-        .glass-nav { background: rgba(2, 6, 23, 0.9); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(255,255,255,0.1); }
-        .hero-section { background: linear-gradient(rgba(2,6,23,0.8), #020617), url('https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?auto=format&fit=crop&q=60&w=1600'); background-size: cover; background-position: center; }
+        :root {
+            --primary-dark: #233036;
+            --secondary-dark: #244357;
+            --accent-blue: #89A9BA;
+            --text-light: #DBDCDC;
+        }
+
+        body { 
+            background-color: var(--primary-dark); 
+            color: var(--text-light); 
+            font-family: 'Inter', sans-serif; 
+            line-height: 1.8;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4, .nav-logo { 
+            font-family: 'League Spartan', sans-serif; 
+            text-transform: uppercase;
+            letter-spacing: -0.01em;
+        }
+
+        .glass-nav { 
+            background: rgba(35, 48, 54, 0.9); 
+            backdrop-filter: blur(12px); 
+            border-bottom: 1px solid rgba(137, 169, 186, 0.1); 
+        }
+
+        .hero-section { 
+            background: linear-gradient(rgba(35, 48, 54, 0.8), var(--primary-dark)), 
+                        url('https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?auto=format&fit=crop&q=60&w=1600'); 
+            background-size: cover; 
+            background-position: center; 
+        }
+
         .audit-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; }
-        .audit-item { background: rgba(59,130,246,0.05); border-left: 4px solid #3b82f6; padding: 1.5rem; }
+        
+        .audit-item { 
+            background: var(--secondary-dark); 
+            border-left: 4px solid var(--accent-blue); 
+            padding: 2rem;
+            transition: transform 0.3s ease;
+        }
+        .audit-item:hover { transform: translateY(-5px); }
+
+        .btn-brand { 
+            background: var(--accent-blue);
+            color: var(--primary-dark);
+            transition: 0.3s;
+            font-weight: 800;
+        }
+        .btn-brand:hover { 
+            background: #ffffff; 
+            box-shadow: 0 0 20px rgba(137, 169, 186, 0.4); 
+        }
     </style>
 </head>
 <body>
     <nav class="fixed w-full z-50 glass-nav px-6 py-4 flex items-center justify-between">
-        <div class="flex items-center gap-2 text-2xl font-extrabold tracking-tighter">
-            <span class="bg-blue-600 px-2 py-1 rounded text-white">RBA</span> <span class="text-blue-500">Inspections</span>
+        <div class="flex items-center gap-2 text-2xl font-extrabold tracking-tighter nav-logo">
+            <span class="bg-[#89A9BA] px-2 py-1 rounded text-[#233036]">RBA</span> 
+            <span class="text-[#89A9BA]">Inspections</span>
         </div>
-        <div class="hidden md:flex space-x-8 font-semibold text-sm text-gray-400">
+        <div class="hidden md:flex space-x-8 font-semibold text-sm text-[#DBDCDC]/60">
             <a href="index.html" class="hover:text-white transition">Home</a>
-            <a href="services.html" class="text-blue-500">Services</a>
+            <a href="services.html" class="text-[#89A9BA]">Services</a>
             <a href="cases.html" class="hover:text-white transition">Case Studies</a>
             <a href="reviews.html" class="hover:text-white transition">Reviews</a>
+            <a href="contact.html" class="hover:text-white transition">Contact Us</a>
         </div>
-        <button onclick="window.location.href='index.html#contactModal'" class="bg-blue-600 hover:bg-blue-700 px-6 py-2 rounded-lg font-bold text-sm">Book Audit</button>
+        <button onclick="window.location.href='contact.html'" class="btn-brand px-6 py-2 rounded-lg font-bold text-sm">BOOK AUDIT</button>
     </nav>
 
-    <header class="hero-section pt-48 pb-20 px-6 text-center">
-        <h1 class="text-4xl md:text-6xl font-extrabold mb-6" data-aos="zoom-in">Factory Audit Solutions</h1>
-        <p class="text-xl text-gray-400 max-w-3xl mx-auto" data-aos="fade-up">Don't just take their word for it. We step inside the factory to verify licenses, capacity, and quality management systems.</p>
+    <header class="hero-section pt-52 pb-24 px-6 text-center">
+        <div data-aos="zoom-in">
+            <p class="text-[#89A9BA] font-bold uppercase tracking-[0.3em] text-xs mb-4">Supplier Due Diligence</p>
+            <h1 class="text-4xl md:text-7xl font-extrabold mb-6 uppercase tracking-tighter">Factory Audit <span class="text-[#89A9BA]">Solutions</span></h1>
+            <p class="text-xl text-[#DBDCDC]/70 max-w-3xl mx-auto font-light leading-relaxed">
+                Don't just take their word for it. We step inside the facility to verify licenses, production capacity, and quality management systems.
+            </p>
+        </div>
     </header>
 
-    <main class="max-w-4xl mx-auto px-6 py-12">
-        <article class="space-y-12 text-gray-300">
+    <main class="max-w-4xl mx-auto px-6 py-20">
+        <article class="space-y-16 text-[#DBDCDC]/80">
+            
             <section data-aos="fade-up">
-                <h2 class="text-3xl font-bold text-white mb-6">Know Who You Are Buying From</h2>
-                <p>The global marketplace is full of "trading companies" posing as manufacturers. While they might provide a good price, they lack the direct control over quality that a factory owner possesses. RBA’s Factory Audit services identify the truth behind the website.</p>
-                <p class="mt-4">Our <strong>Supplier Evaluation</strong> is designed to protect you from the "Sample Bait and Switch." We confirm that the factory shown in the photos is actually where your goods will be produced, and that they have the machinery and labor force required to hit your deadlines.</p>
+                <h2 class="text-3xl font-bold text-white mb-6 uppercase tracking-tight">Know Who You Are Buying From</h2>
+                <p class="mb-4">The global marketplace is full of "trading companies" posing as manufacturers. While they might provide a competitive price, they often lack the direct control over quality that a factory owner possesses. RBA’s Factory Audit services reveal the truth behind the digital storefront.</p>
+                <p>Our <strong>Supplier Evaluation</strong> is designed to protect you from the "Sample Bait and Switch." We confirm that the facility shown in your contract is actually where your goods will be produced, and that they possess the machinery and labor force required to meet your deadlines.</p>
             </section>
 
             <div class="audit-grid" data-aos="fade-up">
                 <div class="audit-item">
-                    <h4 class="font-bold text-white mb-2">QMS Evaluation</h4>
-                    <p class="text-xs">Checking ISO 9001 compliance and internal quality control protocols.</p>
+                    <h4 class="font-bold text-white mb-3 tracking-widest text-sm">QMS Evaluation</h4>
+                    <p class="text-xs leading-relaxed font-light">Comprehensive checking of ISO 9001 compliance and internal quality control protocols at every production stage.</p>
                 </div>
                 <div class="audit-item">
-                    <h4 class="font-bold text-white mb-2">Production Lines</h4>
-                    <p class="text-xs">Assessing machinery age, maintenance logs, and throughput capacity.</p>
+                    <h4 class="font-bold text-white mb-3 tracking-widest text-sm">Production Lines</h4>
+                    <p class="text-xs leading-relaxed font-light">On-site assessment of machinery age, maintenance logs, and actual monthly throughput capacity.</p>
                 </div>
                 <div class="audit-item">
-                    <h4 class="font-bold text-white mb-2">Human Rights</h4>
-                    <p class="text-xs">Reviewing social compliance, child labor policies, and safety standards.</p>
+                    <h4 class="font-bold text-white mb-3 tracking-widest text-sm">Human Rights</h4>
+                    <p class="text-xs leading-relaxed font-light">Deep-dive review of social compliance, child labor policies, and international safety standards.</p>
                 </div>
                 <div class="audit-item">
-                    <h4 class="font-bold text-white mb-2">Warehousing</h4>
-                    <p class="text-xs">Verification of raw material storage and inventory management systems.</p>
+                    <h4 class="font-bold text-white mb-3 tracking-widest text-sm">Warehousing</h4>
+                    <p class="text-xs leading-relaxed font-light">Verification of raw material storage conditions and digital inventory management system accuracy.</p>
                 </div>
             </div>
 
-            <section data-aos="fade-up">
-                <h2 class="text-3xl font-bold text-white mb-6 italic">The Audit Methodology</h2>
-                <p>An RBA auditor spends a full day on-site, performing a 360-degree review of the facility. We don't just sit in the manager's office; we walk the floor, interview staff, and check the calibration dates on the testing equipment.</p>
-                <p class="mt-4">Our reports provide a "weighted score" across different departments, giving you a clear "Pass," "Fail," or "Corrective Action Needed" result. This data is vital for procurement teams who need to justify their supplier selection to stakeholders.</p>
+            <section data-aos="fade-up" class="border-t border-white/10 pt-16">
+                <h2 class="text-3xl font-bold text-white mb-6 uppercase tracking-tight">The Audit Methodology</h2>
+                <p class="mb-6">An RBA auditor spends a full day on-site, performing a 360-degree review of the facility. We don't just sit in the manager's office; we walk the floor, interview staff, and check the calibration dates on the testing equipment.</p>
+                <p>Our reports provide a <span class="text-[#89A9BA] font-bold">weighted score</span> across different departments, giving you a clear "Pass," "Fail," or "Corrective Action Needed" result. This data is vital for procurement teams who need to justify supplier selection to stakeholders.</p>
             </section>
 
             <section data-aos="fade-up">
-                <h2 class="text-3xl font-bold text-white mb-6">Ethical Sourcing & Social Compliance</h2>
-                <p>Modern consumers care about where their products come from. An unethical supplier can destroy a brand overnight. Our audits include a deep dive into the facility's social responsibility, checking for fair wages, safe working conditions, and environmental management. By choosing RBA, you ensure your supply chain remains transparent and ethical.</p>
+                <h2 class="text-3xl font-bold text-white mb-6 uppercase tracking-tight">Ethical Sourcing & Social Compliance</h2>
+                <p class="mb-10 font-light">Modern consumers care about where their products come from. An unethical supplier can destroy a brand overnight. Our audits include a deep dive into the facility's social responsibility, checking for fair wages, safe working conditions, and environmental management. By choosing RBA, you ensure your supply chain remains transparent and ethical.</p>
+                
+                <div class="text-center">
+                    <a href="contact.html" class="btn-brand px-10 py-4 rounded-xl font-extrabold uppercase tracking-[0.2em] text-sm inline-block shadow-2xl">
+                        Request Site Audit
+                    </a>
+                </div>
             </section>
         </article>
     </main>
 
-    <footer class="bg-slate-950 py-12 px-6 border-t border-white/5 text-gray-500 text-sm text-center">
-        <p>© 2026 RBA Inspections. Global Quality, Guaranteed.</p>
+    <footer class="bg-[#233036] py-16 px-6 border-t border-white/5 text-[#DBDCDC]/40 text-sm text-center">
+        <p>© 2026 RBA Inspections. Global Quality, Guaranteed. | Designed by Empress Creations.</p>
     </footer>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
